@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>juego del ahorcado</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/Vector.png" alt="" width="30px" >
+        <h1 class="titulo">Juego del ahorcado</h1>
+    </header>
+    <div id="div-aparece-ahorcado" class="canvas">
+        <h2 class="inicio">Bienvenido!<br>Presione nuevo juego para iniciar una partida.</h2>
+        <h2 class="juegoGanado ocultar">Felicitaciones!<br>has ganado la partida.</h2>
+        <h2 class="juegoPerdido ocultar">Lo siento mucho!<br>has perdido la partida.</h2>
+        <canvas class="canvas2 ocultar" id="horca" height="550px" width="800px"></canvas>
+        <div class="subrayado"></div>
+    </div>    
+
+    <div class="botones">
+        <input class="btnNuevo"  type="button" value="Nuevo juego" id="btn-nuevoJuego">
+        <input  class="btnDesistir" type="button" value="Desistir"id="btn-desistir">
+    </div>
+    <footer>
+        <p>Lautaro Gutierrez 2022 | Buenos Aires, Argentina</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
