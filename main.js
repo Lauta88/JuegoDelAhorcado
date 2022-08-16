@@ -31,14 +31,14 @@ function dibujarHorca(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(250, 420)
-    tablero.lineTo(550, 420)
-    tablero.moveTo(320, 420)
-    tablero.lineTo(320, 50)
-    tablero.moveTo(320, 50)
-    tablero.lineTo(480, 50)
-    tablero.moveTo(480, 50)
-    tablero.lineTo(480, 100)
+    tablero.moveTo(50, 420)
+    tablero.lineTo(350, 420)
+    tablero.moveTo(120, 420)
+    tablero.lineTo(120, 50)
+    tablero.moveTo(120, 50)
+    tablero.lineTo(280, 50)
+    tablero.moveTo(280, 50)
+    tablero.lineTo(280, 100)
     tablero.stroke()
     tablero.closePath()
 
@@ -52,10 +52,10 @@ function dibujarLineas(){
     tablero.beginPath()
     
 
-    var ancho=600/palabraSecreta.length;
+    var ancho=400/palabraSecreta.length;
     for (let i = 0; i < palabraSecreta.length; i++){
-            tablero.moveTo(100+(ancho*i), 490)
-            tablero.lineTo(130+(ancho*i), 490)
+            tablero.moveTo(50+(ancho*i), 490)
+            tablero.lineTo(70+(ancho*i), 490)
     }
     tablero.stroke()
     tablero.closePath()
@@ -65,14 +65,14 @@ function dibujarLineas(){
 
 
 function escribirLetraCorrecta(index){
-    tablero.font = 'bold 45px Arial'
+    tablero.font = 'bold 35px Arial'
     tablero.width = 6
     tablero.lineCap = "round"
     tablero.lineJoin = "round"
     tablero.fillStyle = "#0A3871"
 
-    var ancho=600/palabraSecreta.length;
-    tablero.fillText(palabraSecreta[index], 100+(ancho*index), 480)
+    var ancho=400/palabraSecreta.length;
+    tablero.fillText(palabraSecreta[index], 50+(ancho*index), 480)
 }
 
 function escribirLetraIncorrecta(letra, errorsLeft){
@@ -82,7 +82,7 @@ function escribirLetraIncorrecta(letra, errorsLeft){
     tablero.lineJoin = "round"
     tablero.fillStyle = "#0A3871"
 
-    tablero.fillText(letra, 135+(40*(10-errorsLeft)), 540,40)
+    tablero.fillText(letra, 50+(30*(10-errorsLeft)), 540,40)
 }
 
 function verificarLetraClicada(key){
@@ -176,7 +176,7 @@ function dibujarCabeza(){
     tablero.fillStyle = '#0A3871'
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.arc(480, 130, 25, 0, 2 * Math.PI, false);
+    tablero.arc(280, 130, 25, 0, 2 * Math.PI, false);
     tablero.fill();
     tablero.stroke()
     tablero.closePath()
@@ -188,8 +188,8 @@ function dibujarCuerpo(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(480, 160)
-    tablero.lineTo(480, 250)
+    tablero.moveTo(280, 160)
+    tablero.lineTo(280, 250)
     tablero.stroke()
     tablero.closePath()
 }
@@ -200,8 +200,8 @@ function dibujarPiernaIzq(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(480, 250)
-    tablero.lineTo(450, 320)
+    tablero.moveTo(280, 250)
+    tablero.lineTo(250, 320)
     tablero.stroke()
     tablero.closePath()
 }
@@ -212,8 +212,8 @@ function dibujarPieIzq(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(450, 320)
-    tablero.lineTo(440, 320)
+    tablero.moveTo(250, 320)
+    tablero.lineTo(240, 320)
     tablero.stroke()
     tablero.closePath()
 }
@@ -224,8 +224,8 @@ function dibujarPiernaDer(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(480, 250)
-    tablero.lineTo(510, 320)
+    tablero.moveTo(280, 250)
+    tablero.lineTo(310, 320)
     tablero.stroke()
     tablero.closePath()
 }
@@ -236,8 +236,8 @@ function dibujarPieDer(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(510, 320)
-    tablero.lineTo(520, 320)
+    tablero.moveTo(310, 320)
+    tablero.lineTo(320, 320)
     tablero.stroke()
     tablero.closePath()
 }
@@ -248,8 +248,8 @@ function dibujarBrazoIzq(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(480, 160)
-    tablero.lineTo(450, 220)
+    tablero.moveTo(280, 160)
+    tablero.lineTo(250, 220)
     tablero.stroke()
     tablero.closePath()
 }
@@ -260,8 +260,8 @@ function dibujarBrazoDer(){
     tablero.lineJoin = "round"
     tablero.strokeStyle = "#0A3871"
     tablero.beginPath()
-    tablero.moveTo(480, 160)
-    tablero.lineTo(510, 220)
+    tablero.moveTo(280, 160)
+    tablero.lineTo(310, 220)
     tablero.stroke()
     tablero.closePath()
 }
